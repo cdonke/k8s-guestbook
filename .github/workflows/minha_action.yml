@@ -1,22 +1,22 @@
 name: minha-action-github
 run-name: ${{ github.actor }} esta comecando no github actions
 
-  on:
-    push:
-      test/**
+on:
+  push:
+    test/**
 
-  jobs:
-    ver-versao-bats:
-      runs-on: self-hosted
-      shell: bash 
-      steps:
-        - uses: actions/checkout@v3
-        - uses: actions/setup-node@v3
-          with:
-            node-version: "14"
+jobs:
+  ver-versao-bats:
+    #runs-on: self-hosted
+    #shell: bash 
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14"
 
-        - run: npm install -g bats
+      - run: npm install -g bats
 
-        - run: bats -v
+      - run: bats -v
 
 
