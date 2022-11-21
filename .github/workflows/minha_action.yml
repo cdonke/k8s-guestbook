@@ -2,8 +2,8 @@ name: minha-action-github
 run-name: ${{ github.actor }} esta comecando no github actions
 
 on:
-  push:
-    test/**
+  [push]:
+    - test/**
 
 jobs:
   ver-versao-bats:
