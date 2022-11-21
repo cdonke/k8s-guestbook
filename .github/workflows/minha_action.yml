@@ -5,7 +5,7 @@ on: [push]
     
 jobs:
   ver-versao-bats:
-    #runs-on: self-hosted
+    runs-on: self-hosted
     #shell: bash 
     steps:
       - uses: actions/checkout@v3
