@@ -4,7 +4,7 @@ run-name: ${{ github.actor }} esta comecando no github actions
 on: 
   push:
     branches:
-      - test
+      - test/**
   workflow_dispatch:
     
 jobs:
